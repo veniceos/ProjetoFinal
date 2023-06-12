@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel</title>
+    <link rel="stylesheet" href="./CSS/styl.css">
+</head>
+<body>
+    <div class="princ">
+<header>
+    <img src="Imagens/vetor menu.png" class="menu-i"> </img>
+    <div class="logo"><a href="index.php"><img src="Imagens/logo.png" class="log"></img></a></div>
+        <div class="log"><img src="Imagens/vetor perfil.png"></div>
+    </div>
+    </header>
+
 
 <?php
 include 'db.php';
@@ -25,15 +43,8 @@ $tempo = $appointment['tempo'];
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-     <title>Atualizar tarefa</title>
-</head>
-<body>
-     
-
-    <h1>Atualizar tarefa</h1>
+<P class="ttl-c">ATUALIZAR</p>
+    <div class="form1">
 <form>
     <label for="nome">Nome:</label>
 <input type="text" name="nome" required><br>
@@ -48,7 +59,10 @@ $tempo = $appointment['tempo'];
 <input type="date" name="data" required><br>
 
 <label for="carro">carro:</label>
-<input type="text" name="carro" required><br>
+<select name="carro">
+<option value="Fiat Uno 1999">Fiat Uno 1999</option>
+<option value="Gol G2">Gol G2</option>
+<option value="Tesla Twitter">Tesla Twitter</option></select><br>
 
 <label for="tempo">tempo:</label>
 <input type="text" name="tempo" required><br>
@@ -72,3 +86,4 @@ header('Location: lista.php');
 exit;
 }
 ?>
+</div>

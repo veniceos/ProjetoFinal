@@ -1,20 +1,6 @@
 <?php 
 require_once 'db.php';
-?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styl.css">
-    <title>Venda de Frutas</title>
-</head>
-<body>
-    <div class="container">
-        <h1></h1>
-        <?php 
         if (isset($_POST['submit'])){
             $nome = $_POST ['nome'];
             $email = $_POST ['email'];
@@ -48,7 +34,28 @@ require_once 'db.php';
             }
         }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluguel</title>
+    <link rel="stylesheet" href="./CSS/styl.css">
+</head>
+<body>
+    <div class="princ">
+<header>
+    <img src="Imagens/vetor menu.png" class="menu-i"> </img>
+    <div class="logo"><a href="index.php"><img src="Imagens/logo.png" class="log"></img></a></div>
+        <div class="log"><img src="Imagens/vetor perfil.png"></div>
+    </div>
+    </header>
 
+<section>
+
+<P class="ttl-c">ALUGAR</p>
+    <div class="form1">
 <form method="post">
 
 <label for="nome">Nome:</label>
@@ -64,17 +71,21 @@ require_once 'db.php';
 <input type="date" name="data" required><br>
 
 <label for="carro">carro:</label>
-<input type="text" name="carro" required><br>
+<select name="carro">
+<option value="Fiat Uno 1999">Fiat Uno 1999</option>
+<option value="Gol G2">Gol G2</option>
+<option value="Tesla Twitter">Tesla Twitter</option></select><br>
 
 <label for="tempo">tempo:</label>
 <input type="text" name="tempo" required><br>
 
     <div>
 
-    <button type="submit" name="submit" value="Agendar">Agendar</button>
+    <button class="submit" type="submit" name="submit" value="Agendar">Agendar</button>
     <button><a href="lista.php">Listar</a></button>
     </div>
-
     </form>
+    </div>
+    </section>
 </body>
 </html>

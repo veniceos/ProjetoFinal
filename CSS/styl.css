@@ -1,0 +1,196 @@
+body{
+   margin: 0 auto; 
+   background-color: #222222;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+}
+
+.princ{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    grid-template-rows: 70px 400px 100px;
+    grid-template-areas:
+    "cab"
+    "pag"
+    "rod";
+}
+
+header{
+    grid-area: cab;
+    background-color:#1E1E1E; 
+    display: inline-flex;
+}
+
+section{
+    grid-area: pag;
+}
+
+.prod{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    grid-area: rot;
+
+}
+
+.menu-i{
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 40px;
+}
+
+.logo{
+    margin-left: 560px;
+    margin-right: 50%;
+    color:white;
+}
+
+.carrin{
+    height: 50px;
+}
+
+.log{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: -170px;
+}
+
+.cont{
+    display: block;
+    color:black;
+    background-color: #D9D9D9;
+    width: 270px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    margin-top: 60px;
+}
+
+.a{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.uno{
+    height: 150px;
+}
+
+.gol{
+    height: 200px;
+}
+
+.tesla{
+    height: 130px;
+    margin-top: 38px;
+}
+
+.cont-t{
+    color:black;
+    font-size: 27px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.cont-tg{
+    color:black;
+    font-size: 27px;
+    font-weight: bolder;
+    font-style: italic;
+    margin-top: -23px;
+}
+
+.cont-tt{
+    color:black;
+    font-size: 27px;
+    font-weight: bolder;
+    font-style: italic;
+    margin-top: 0px;
+}
+
+.cont ul li{
+    color:#4E4E4E;
+    font-weight: bolder;
+    
+}
+
+.ttl-c{
+    text-align: center;
+    margin-top: -300px;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-top: -400px;
+    color: #E9A800;
+    font-style: italic;
+}
+
+.algd{
+    margin-top: 100px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #E9A800;
+    margin-left: 600px;
+    margin-right: 600px;
+}
+
+.alg{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+
+.form1{
+    font-size: 20px;
+    color: black;
+    background-color: #D9D9D9;
+    text-align: center;
+    margin-left: 570px;
+    margin-right: 570px;
+    border-radius: 3%;
+}
+
+.form2{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -300px;
+    margin-left: 300x;
+}
+
+.form3{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-top: -300px;
+}
+
+button{
+    background-color: #E9A800;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.btt{
+    color:white;
+    text-decoration: none;
+    text-align: center;
+} 
+
+.table{
+width: 80%;
+}
