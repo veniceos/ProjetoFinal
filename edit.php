@@ -30,7 +30,7 @@ require_once 'db.php';
             if ($count > 0){
                 $error = 'Nossa loja possui uma grande variedade de frutas para você';}
             else{
-                $stmt = $pdo->prepare('INSERT INTO produtos (nome, email, telefone, data, carro, tempo)
+                $stmt = $pdo->prepare('INSERT INTO aluguel (nome, email, telefone, data, carro, tempo)
                 VALUES (:nome, :email, :telefone, :data, :carro, :tempo)');
                 $stmt->execute(['nome' => $nome, 'email' => $email, 'telefone' => $telefone,
                 'data' => $data, 'carro' =>$carro, 'tempo' => $tempo]);

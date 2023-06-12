@@ -1,4 +1,5 @@
-<div class="container"><?php
+
+<?php
 include 'db.php';
 if (!isset($_GET['id'])) {
     header('Location: lista.php');
@@ -10,63 +11,64 @@ $stmt = $pdo->prepare('SELECT * FROM aluguel WHERE id = ?');
 $stmt->execute([$id]);
 $appointment = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if(!$appointment) {
+if (!$appointment) {
     header('Location: lista.php');
     exit;
-}
+} 
+$nome = $appointment['nome'];
+$telefone = $appointment['telefone'];
+$email = $appointment['email'];
+$data = $appointment['data'];
+$carro = $appointment['carro'];
+$tempo = $appointment['tempo'];
 
-$nome = $appointment ['nome'];
-$email = $appointment ['email'];
-$telefone = $appointment ['telefone'];
-$data = $appointment ['data'];
-$carro = $appointment ['carro'];
-$tempo = $appointment ['tempo'];
+
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar compras</title>
+     <title>Atualizar tarefa</title>
 </head>
 <body>
-    <h1>Atualizar compras</h1>
-    <form method="post">
+     
+
+    <h1>Atualizar tarefa</h1>
+<form>
     <label for="nome">Nome:</label>
-    <input type="text" name="nome" value="<?php echo $nome; ?>" required><br>
+<input type="text" name="nome" required><br>
 
-    <label for="tamanho">Tamanho:</label>
-    <input type="text" name="tamanho" value="<?php echo $tamanho; ?>" required><br>
+<label for="email">email:</label>
+<input type="text" name="email" required><br>
 
-    <label for="peso">Peso:</label>
-    <input type="text" name="peso" value="<?php echo $peso; ?>" required><br>
+<label for="telefone">telefone:</label>
+<input type="text" name="telefone" required><br>
 
-    <label for="quantidade">Quantidade:</label>
-    <input type="text" name="quantidade" value="<?php echo $quantidade; ?>" required><br>
+<label for="data">data:</label>
+<input type="date" name="data" required><br>
 
-    <label for="preco">Preço:</label>
-    <input type="text" name="preco" value="<?php echo $preco; ?>" required><br>
+<label for="carro">carro:</label>
+<input type="text" name="carro" required><br>
 
-    <button type="submit">Atualizar</button>
-</form>
+<label for="tempo">tempo:</label>
+<input type="text" name="tempo" required><br>
+    
+        <button type="submit">Atualizar</button>
+    </form>
 </body>
-
 </html>
-<?php 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-$nome = $_POST ['nome'];
-$email = $_POST ['email'];
-$telefone = $_POST ['telefone'];
-$data = $_POST ['data'];
-$carro = $_POST['carro'];
-$tempo = $_POST ['tempo'];
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $nome=$_POST['nome'];
+        $email=$_POST['email'];
+        $telefone=$_POST['telefone'];
+        $dataa=$_POST['data'];
+        $carro=$_POST['carro'];
+        $tempo=$_POST['tempo'];
 
-    //validação dos dados dop formulário aqui
-    $stmt = $pdo->prepare('UPDATE aluguel SET nome = ?, email = ?, telefone = ?, data = ?, carro = ?, tempo = ?,  = ? WHERE id = ?');
-    $stmt->execute([$nome, $tamanho, $peso, $quantidade, $preco, $id]);
-    header('Location: lista.php');
-    exit;
+$stmt = $pdo->prepare('UPDATE aluguel SET nome = ?, email = ?, telefone = ?, data = ?, carro = ?, tempo = ? WHERE id = ?');
+$stmt->execute([$nome, $email, $telefone, $data, $carro, $tempo, $id]);
+header('Location: lista.php');
+exit;
 }
 ?>
