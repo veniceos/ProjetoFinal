@@ -50,7 +50,8 @@
     echo '</tbody>';
     echo '</table>';
     }
-?>    
-</div>
+?> <br>  </div>
+<div class="algl"><a class="algl1" href="edit.php">Alugar!</a></div>
+
 </body>
 </html>
