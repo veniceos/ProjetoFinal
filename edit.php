@@ -62,7 +62,7 @@ require_once 'db.php';
 <input type="text" name="nome" required><br>
 
 <label for="email">email:</label>
-<input type="text" name="email" required><br>
+<input type="email" name="email" required><br>
 
 <label for="telefone">telefone:</label>
 <input type="text" name="telefone" required><br>
